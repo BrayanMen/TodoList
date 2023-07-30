@@ -1,0 +1,54 @@
+.todoContainer {
+    width: 500px;
+    margin: 100px auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    padding: 20px;
+    border: 1px solid  rgba(72, 64, 64, 0.44);
+
+}
+
+.todoForm {
+    display: flex;
+    gap: 5px;
+}
+
+.todoInput {
+    padding: 0.6em 1.2em;
+    width: 100%;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.146);
+    border-radius: 8px;
+}
+
+.todoInput:hover {
+    border: 2px solid;
+    border-color: #b87b7b;
+    border-radius: 8px;
+}
+
+.todoButtom {
+    border: 1px solid rgba(126, 27, 27, 0.146);
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 6px;
+    transition: border-color 0.10s;
+    cursor: pointer;
+}
+
+.todoButtom:hover {
+    border: 2px solid;
+    border-color: #b87b7b;
+}
+
+.todosContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

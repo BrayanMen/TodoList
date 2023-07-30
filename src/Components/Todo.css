@@ -1,0 +1,45 @@
+.todo{
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.146);
+    border-radius: 4px;
+}
+
+.todoInfo, .updateForm{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.todoText{
+    flex: 1;
+}
+
+.todoButton{
+    border: 1px solid rgba(126, 27, 27, 0.146);
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 6px;
+    transition: border-color 0.10s;
+    cursor: pointer;
+}
+
+.todoButton:hover{
+    background-color: blue;
+    color: whitesmoke;
+}
+
+.todoButtonDelete{
+    border: 1px solid rgba(126, 27, 27, 0.146);
+    border-radius: 8px;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    margin-left: 6px;
+    transition: border-color 0.10s;
+    cursor: pointer;
+}
+.todoButtonDelete:hover{
+    background-color: crimson;
+    color: whitesmoke;
+}
