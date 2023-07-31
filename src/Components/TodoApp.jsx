@@ -100,7 +100,7 @@ function TodoApp() {
                             checked={show}
                             onChange={() => setShow(!show)}
                         />
-                        <label>Mostrar Tareas Terminadas</label>
+                        <label>Mostrar Tareas Terminadas.</label>
                         <button
                             className="todoButtonDelete"
                             onClick={handleClear}>Limpiar</button>
