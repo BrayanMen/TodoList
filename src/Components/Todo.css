@@ -1,19 +1,26 @@
-.todo{
+.todo {
     padding: 10px;
     background-color: rgba(128, 128, 128, 0.146);
     border-radius: 4px;
+    margin: 4px;
 }
-
-.todoInfo, .updateForm{
+.updateForm {
+    display: flex;
+    justify-content: space-around;
+}
+.todoInfo,
+.updateForm {
     display: flex;
     align-items: center;
     gap: 5px;
+    padding: 5px;
 }
-.todoText{
+
+.todoText {
     flex: 1;
 }
 
-.todoButton{
+.todoButton {
     border: 1px solid rgba(126, 27, 27, 0.146);
     border-radius: 8px;
     padding: 0.6em 1.2em;
@@ -24,12 +31,12 @@
     cursor: pointer;
 }
 
-.todoButton:hover{
+.todoButton:hover {
     background-color: blue;
     color: whitesmoke;
 }
 
-.todoButtonDelete{
+.todoButtonDelete {
     border: 1px solid rgba(126, 27, 27, 0.146);
     border-radius: 8px;
     padding: 0.6em 1.2em;
@@ -39,7 +46,8 @@
     transition: border-color 0.10s;
     cursor: pointer;
 }
-.todoButtonDelete:hover{
+
+.todoButtonDelete:hover {
     background-color: crimson;
     color: whitesmoke;
 }

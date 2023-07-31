@@ -1,7 +1,16 @@
 import { useState } from "react";
 import './Todo.css'
+import PropTypes from 'prop-types';
 
-export default function Todo({ ele, onUpdate, onDelete }) {
+
+export default function Todo({ ele, onUpdate, onDelete, toggleTask }) {
+    Todo.propTypes = {
+        ele: PropTypes.object.isRequired,
+        onUpdate: PropTypes.func.isRequired,
+        onDelete: PropTypes.func.isRequired,
+        toggleTask: PropTypes.func.isRequired,
+      };
+
     const [isEdit, setIsEdit] = useState(false)
 
     function FormEdit() {
@@ -19,27 +28,41 @@ export default function Todo({ ele, onUpdate, onDelete }) {
         }
 
         return (
+            <td>
             <form className="updateForm" onSubmit={handleSubmit}>
                 <input type="text"  onChange={handleChange} value={newValue}/>
                 <button className="todoButton" onClick={handleClick}>Actualizar</button>
             </form>
+            </td>
         )
     }
 
     function TodoElement() {
         return (
-            <div className="todoInfo">
+            <td className="todoInfo">
                 <span className="todoText">{ele.title}</span>
-                <button className="todoButton" onClick={() => setIsEdit(true)}>Editar</button>
-                <button className="todoButtonDelete" onClick={(e) => onDelete(ele.id)}>Eliminar</button>
-            </div>
+                <input 
+                type="checkbox" 
+                checked={ele.done}
+                onChange={()=>toggleTask(ele)}
+                />
+                <button 
+                className="todoButton" 
+                onClick={() => setIsEdit(true)}>Editar</button>
+                <button 
+                className="todoButtonDelete" 
+                onClick={() => onDelete(ele.id)}>Eliminar</button>
+            </td>
         )
     }
     return (
         <>
-            <div className="todo">
-                {isEdit ? <FormEdit /> : <TodoElement />}
-            </div>
+        <tr className="todo">            
+                {isEdit ? 
+                <FormEdit /> 
+                : 
+                <TodoElement />}        
+        </tr>
         </>
     )
 }
